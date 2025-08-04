@@ -146,12 +146,12 @@ class EventsApp {
     }
 
     validateEventForm(data) {
-        return data.title && 
-               data.description && 
-               data.date && 
-               data.location && 
-               data.capacity && 
-               data.capacity > 0;
+        return !!(data.title && 
+                 data.description && 
+                 data.date && 
+                 data.location && 
+                 data.capacity && 
+                 data.capacity > 0);
     }
 
     showMessage(message, type) {
