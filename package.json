@@ -1,0 +1,22 @@
+{
+  "name": "usiu-events-system",
+  "version": "1.0.0",
+  "description": "USIU Events Management System - CI/CD Demonstration",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd server && npm test",
+    "test:frontend": "cd client && npm test",
+    "build": "cd client && npm run build",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start"
+  },
+  "keywords": ["events", "management", "ci-cd", "usiu"],
+  "author": "USIU Student",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

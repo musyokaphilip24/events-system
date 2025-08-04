@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU Events Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🎓 USIU Events Management System</h1>
+        <p>Discover and manage university events</p>
+    </header>
+
+    <main class="container">
+        <section id="events-section">
+            <h2>📅 Upcoming Events</h2>
+            <div id="events-loading" class="loading">Loading events...</div>
+            <div id="events-container" class="events-grid"></div>
+            <div id="events-error" class="error hidden">
+                Failed to load events. Please try again later.
+            </div>
+        </section>
+
+        <section id="clubs-section">
+            <h2>🏛️ Student Clubs</h2>
+            <div id="clubs-loading" class="loading">Loading clubs...</div>
+            <div id="clubs-container" class="clubs-grid"></div>
+            <div id="clubs-error" class="error hidden">
+                Failed to load clubs. Please try again later.
+            </div>
+        </section>
+
+        <section id="create-event-section">
+            <h2>➕ Create New Event</h2>
+            <form id="event-form" class="event-form">
+                <input type="text" id="event-title" placeholder="Event Title" required>
+                <textarea id="event-description" placeholder="Event Description" required></textarea>
+                <input type="date" id="event-date" required>
+                <input type="text" id="event-location" placeholder="Location" required>
+                <input type="number" id="event-capacity" placeholder="Capacity" min="1" required>
+                <button type="submit">Create Event</button>
+            </form>
+            <div id="form-message" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 USIU Events Management System | Built with ❤️ for learning CI/CD</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

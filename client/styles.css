@@ -1,0 +1,183 @@
+/* USIU Events Management System Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.events-grid, .clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.event-card, .club-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-card:hover, .club-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.event-title, .club-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.event-date {
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.event-description, .club-description {
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.event-details, .club-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.event-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+}
+
+.event-form input,
+.event-form textarea,
+.event-form button {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.event-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.event-form button {
+    background: #667eea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.event-form button:hover {
+    background: #5a67d8;
+}
+
+.loading {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+    padding: 2rem;
+}
+
+.error {
+    color: #e53e3e;
+    text-align: center;
+    padding: 1rem;
+    background: #fed7d7;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.success {
+    color: #38a169;
+    text-align: center;
+    padding: 1rem;
+    background: #c6f6d5;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    .events-grid, .clubs-grid {
+        grid-template-columns: 1fr;
+    }
+}

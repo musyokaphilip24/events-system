@@ -1,0 +1,25 @@
+{
+  "name": "usiu-events-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for USIU Events Management System",
+  "scripts": {
+    "start": "http-server dist -p 3000",
+    "build": "mkdir -p dist && cp *.html *.css *.js dist/",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "http-server . -p 3000"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "http-server": "^14.1.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ]
+  }
+}
