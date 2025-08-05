@@ -23,6 +23,9 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
+        cache-dependency-path: |
+          server/package-lock.json
+          client/package-lock.json
     
     # Step 3b: Install Dependencies
     - name: "📦 Install Backend Dependencies"
@@ -70,7 +73,7 @@ jobs:
         npm run build
         
     - name: "📤 Upload Build Artifacts"
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: frontend-build
         path: client/dist/
