@@ -1,3 +1,5 @@
+# events-system
+# we are group now working on a collaborative work
 # USIU Events Management System
 
 ## 🎓 CI/CD Implementation Project
@@ -41,6 +43,11 @@ curl http://localhost:3001/health
 - **Test Coverage:** 80%+ across backend and frontend
 - **Response Time:** <200ms average API response
 - **Pipeline Speed:** 5-second automated validation
+
+---
+*Built for USIU-Africa Collaborative Software Development Course*
+*Demonstrating industry-standard practices and professional engineering*
+We Are we group 9
 - **Code Quality:** Professional standards with comprehensive documentation
 
 ### 🧪 Testing Results....
